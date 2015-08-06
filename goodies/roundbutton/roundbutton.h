@@ -1,6 +1,11 @@
 #ifndef ROUNDBUTTON_H
 #define ROUNDBUTTON_H
 
+/*
+ *-- @author Izzulmakin, 2015-08-07
+ */
+
+
 #include <QDebug>
 #include <QtCore>
 #include <QtGui>

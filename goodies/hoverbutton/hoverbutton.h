@@ -2,6 +2,7 @@
 #define HOVERBUTTON_H
 
 /*--
+ * @author: Izzulmakin, 2015-08-07
  * reimplementation of QPushButton that provide
  * several important signals:
  *      focus in/hover, focus out/leave
