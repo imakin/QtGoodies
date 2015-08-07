@@ -5,7 +5,7 @@
  * @author: Izzulmakin, 2015-08-07
  * reimplementation of QPushButton that provide
  * several important signals:
- *      focus in/hover, focus out/leave
+ *      hover, leave
  */
 
 #include <QPushButton>
@@ -21,8 +21,8 @@ protected:
     void leaveEvent(QEvent * e);
 
 signals:
-    void onhover();
-    void onleave();
+    void onHover();
+    void onLeave();
 
 public slots:
 

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/i">
+        <file>rftl.jpg</file>
+        <file>plang2.jpg</file>
+        <file>m.jpg</file>
+    </qresource>
+</RCC>

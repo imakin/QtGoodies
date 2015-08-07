@@ -7,11 +7,11 @@ HoverButton::HoverButton(QWidget *parent) :
 
 void HoverButton::enterEvent(QEvent *e)
 {
-    emit onhover();
+    emit onHover();
     QPushButton::enterEvent(e);
 }
 void HoverButton::leaveEvent(QEvent *e)
 {
-    emit onleave();
+    emit onLeave();
     QPushButton::leaveEvent(e);
 }

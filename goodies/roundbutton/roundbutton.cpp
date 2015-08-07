@@ -15,8 +15,8 @@ RoundButton::RoundButton(QWidget *parent,
     ati_bgrad = new QTimer(this);
     ato_bgrad = new QTimer(this);
 
-    connect(this,SIGNAL(onhover()),this,SLOT(hover()));
-    connect(this,SIGNAL(onleave()),this,SLOT(leave()));
+    connect(this,SIGNAL(onHover()),this,SLOT(hover()));
+    connect(this,SIGNAL(onLeave()),this,SLOT(leave()));
     connect(ati_bgrad,SIGNAL(timeout()),this,SLOT(asi_bgrad()));
     connect(ato_bgrad,SIGNAL(timeout()),this,SLOT(aso_bgrad()));
 }
@@ -30,7 +30,7 @@ void RoundButton::paintEvent(QPaintEvent *e)
     painter.setRenderHint(QPainter::Antialiasing);
 
     //-- draw its outline
-    painter.setPen(QPen(QBrush(QColor::fromRgba(0xff84b9d7)), 1.0));
+    painter.setPen(QPen(QBrush(QColor::fromRgba(0xaa84b9d7)), 1.0));
     painter.drawArc(1,1,W-1,H-1,0,360*16);
 
     //-- draw its animated zoomed in background

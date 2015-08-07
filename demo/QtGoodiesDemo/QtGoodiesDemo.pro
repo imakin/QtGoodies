@@ -16,11 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     ../../goodies/roundbutton/roundbutton.cpp \
     ../../goodies/hoverbutton/hoverbutton.cpp \
-    ../../goodies/slider/slider.cpp
+    ../../goodies/slider/slider.cpp \
+    ../../goodies/hoverframe/hoverframe.cpp
 
 HEADERS  += mainwindow.h \
     ../../goodies/roundbutton/roundbutton.h \
     ../../goodies/hoverbutton/hoverbutton.h \
-    ../../goodies/slider/slider.h
+    ../../goodies/slider/slider.h \
+    ../../goodies/hoverframe/hoverframe.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    images.qrc

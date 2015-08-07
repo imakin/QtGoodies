@@ -4,11 +4,11 @@ Slider::Slider(QWidget *parent):
     QFrame(parent),
     av_slideDelay(10),
     av_slideSpeed(5),
-    av_slideCounter(0),
     av_slideVStep(0),
-    av_slideHStep(0)
+    av_slideHStep(0),
+    myParent(parent),
+    pageTotal(0)
 {
-    myParent = parent;
     at_slideUp = new QTimer(this);
     at_slideDown = new QTimer(this);
     at_slideLeft = new QTimer(this);
@@ -19,6 +19,7 @@ Slider::Slider(QWidget *parent):
     connect(at_slideRight,SIGNAL(timeout()),this,SLOT(as_slideRight()));
 
     this->autoSize();
+    av_slideSpeed = parent->geometry().width()/60;
 }
 
 void Slider::slide(uint8_t slide_direction)
@@ -28,25 +29,37 @@ void Slider::slide(uint8_t slide_direction)
     this->displayH = pgeom.height();
     switch (slide_direction)
     {
-        case SLIDE_DIRECTION_DOWN:
+        case SLIDE_DIRECTION_DOWN:  /*--= SCROLL_DIRECTION_UP */
+            if (this->av_slideVStep<=-this->pageTotal+1)
+                break;
             this->av_slideVStep += SLIDE_DOWN;
             this->at_slideDown->start(this->av_slideDelay);
             break;
-        case SLIDE_DIRECTION_UP:
+        case SLIDE_DIRECTION_UP:    /*--= SCROLL_DIRECTION_UP //*/
+            if (this->av_slideVStep>=0)
+                break;
             this->av_slideVStep += SLIDE_UP;
             this->at_slideUp->start(this->av_slideDelay);
             break;
-        case SLIDE_DIRECTION_LEFT:
+        case SLIDE_DIRECTION_LEFT:  /*--= SCROLL_DIRECTION_RIGHT //*/
+            if (this->av_slideHStep<=-this->pageTotal+1)
+                break;
             this->av_slideHStep += SLIDE_LEFT;
             this->at_slideLeft->start(this->av_slideDelay);
             break;
-        case SLIDE_DIRECTION_RIGHT:
+        case SLIDE_DIRECTION_RIGHT: /*--= SCROLL_DIRECTION_LEFT //*/
+            if (this->av_slideHStep>=0)
+                break;
             this->av_slideHStep += SLIDE_RIGHT;
             this->at_slideRight->start(this->av_slideDelay);
             break;
         default:
             break;
     }
+}
+void Slider::scroll(uint8_t scroll_direction)
+{
+    this->slide(scroll_direction);
 }
 
 void Slider::as_slideUp()
@@ -146,4 +159,27 @@ void Slider::addPage(int8_t append_direction, QFrame* page)
     }
     page->show();
     this->autoSize();
+    pageTotal += 1;
+}
+
+void Slider::setSlideDelay(int delay_ms)
+{
+    av_slideDelay = delay_ms;
+}
+void Slider::setSlideSpeed(int speed_px)
+{
+    av_slideSpeed = speed_px;
+}
+
+bool Slider::isFirstPage()
+{
+    if (av_slideVStep>=0 || av_slideHStep>=0)
+        return true;
+    return false;
+}
+bool Slider::isLastPage()
+{
+    if (av_slideVStep<=(-pageTotal+1) || av_slideHStep<=(-pageTotal+1))
+        return true;
+    return false;
 }
