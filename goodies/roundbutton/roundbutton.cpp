@@ -24,8 +24,8 @@ RoundButton::RoundButton(QWidget *parent,
 void RoundButton::paintEvent(QPaintEvent *e)
 {
     QRect brect = this->geometry();
-    W = brect.width()-1;
-    H = brect.height()-1;
+    W = brect.width()-2;
+    H = brect.height()-2;
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
