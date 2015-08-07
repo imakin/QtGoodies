@@ -17,16 +17,15 @@ class Slider : public QFrame
 {
     Q_OBJECT
 public:
-    explicit Slider(QWidget* parent=0);
+    explicit Slider(QWidget* parent);
     virtual ~Slider(){}
-    void addPage(int8_t append_direction);
+    void addPage(int8_t append_direction, QFrame* page);
     void autoSize();
     void slide(uint8_t slide_direction);
 
 public:
-    static const int8_t APPEND_RIGHT = 1;
-    static const int8_t APPEND_DOWN = 2;
-    static const int8_t APPEND_BOTTOM = 2;
+    static const int8_t APPEND_RIGHT_MOST = 1;
+    static const int8_t APPEND_BOTTOM_MOST = 2;
     static const uint8_t SLIDE_DIRECTION_LEFT = 1;
     static const uint8_t SLIDE_DIRECTION_RIGHT = 2;
     static const uint8_t SLIDE_DIRECTION_DOWN = 3;

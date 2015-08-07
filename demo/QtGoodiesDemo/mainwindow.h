@@ -23,6 +23,7 @@ private:
 
 private slots:
     void scrollkanan(bool checked);
+    void scrollkiri(bool checked);
 };
 
 #endif // MAINWINDOW_H

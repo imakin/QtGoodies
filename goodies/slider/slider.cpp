@@ -26,7 +26,6 @@ void Slider::slide(uint8_t slide_direction)
     QRect pgeom = this->myParent->geometry();
     this->displayW = pgeom.width();
     this->displayH = pgeom.height();
-    qDebug()<<"slided to "<<slide_direction;
     switch (slide_direction)
     {
         case SLIDE_DIRECTION_DOWN:
@@ -131,6 +130,20 @@ void Slider::autoSize()
             curh = cgeom.height();
         }
     }
-    qDebug()<<0<<","<<0<<","<<mostx+curw<<","<<mosty+curh;
     this->setGeometry(0,0,mostx+curw,mosty+curh);
+}
+
+void Slider::addPage(int8_t append_direction, QFrame* page)
+{
+    page->setParent(this);
+    if (append_direction==APPEND_RIGHT_MOST)
+    {
+        page->setGeometry(this->geometry().width(), 0, myParent->geometry().width(),myParent->geometry().height());
+    }
+    else if (append_direction==APPEND_BOTTOM_MOST)
+    {
+        page->setGeometry(0, this->geometry().height(),myParent->geometry().width(),myParent->geometry().height());
+    }
+    page->show();
+    this->autoSize();
 }
