@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "../../goodies/roundbutton/roundbutton.h"
+#include "../../goodies/slider/slider.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +19,10 @@ public:
     RoundButton *bt_RoundButton;
 private:
     Ui::MainWindow *ui;
+    Slider* slider;
+
+private slots:
+    void scrollkanan(bool checked);
 };
 
 #endif // MAINWINDOW_H

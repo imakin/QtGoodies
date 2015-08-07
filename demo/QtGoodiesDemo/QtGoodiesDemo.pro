@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     ../../goodies/roundbutton/roundbutton.cpp \
-    ../../goodies/hoverbutton/hoverbutton.cpp
+    ../../goodies/hoverbutton/hoverbutton.cpp \
+    ../../goodies/slider/slider.cpp
 
 HEADERS  += mainwindow.h \
     ../../goodies/roundbutton/roundbutton.h \
-    ../../goodies/hoverbutton/hoverbutton.h
+    ../../goodies/hoverbutton/hoverbutton.h \
+    ../../goodies/slider/slider.h
 
 FORMS    += mainwindow.ui
