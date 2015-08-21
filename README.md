@@ -1,7 +1,8 @@
 # QtGoodies
 Collection of reusable Qt classes like animated buttons, slider, etc (in early progress) (read Info)
 
-Discussion goes to issue, use "Feature" label on the issue. 
+Trello todo-list board https://trello.com/b/CwHuHZ69/qtgoodies
+Help, fork, & talks are highly appreciated, Discussion goes to issue, use "Feature" label on the issue. 
 Feel free to write discussion, as long as it is under "Feature" label just treat it like a chat box.
 
 Done projects:
