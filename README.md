@@ -5,11 +5,17 @@ Trello todo-list board https://trello.com/b/CwHuHZ69/qtgoodies
 Help, fork, & talks are highly appreciated, Discussion goes to issue, use "Feature" label on the issue. 
 Feel free to write discussion, as long as it is under "Feature" label just treat it like a chat box.
 
+# Demo
+For full usage & snapshot, fireup your QtCreator and open the demo project files!
+ 
+`demo/QtGoodiesDemo/QtGoodiesDemo.pro`
+
+# Goodies
+all placed separated in `goodies/` folder
+
 Done projects:
   * *HoverButton*: common button derivates QPushButton that provides mouse interaction onHover() and onLeave() signal
   * *HoverFrame*: common frame derivates QFrame that provides mouse interaction onHover() and onLeave() signal
-
-For full usage & snapshot, fireup your QtCreator and open the demo project files!
 
 In-work Projects:
   * *Slider*:
