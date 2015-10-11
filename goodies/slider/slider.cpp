@@ -67,10 +67,12 @@ void Slider::as_slideUp()
     QRect geom = this->geometry();
     if (geom.top() > (this->av_slideVStep*this->displayH))
     {
-        this->setGeometry(geom.left(),
-                          geom.top()-this->av_slideSpeed,
-                          geom.width(),
-                          geom.height());
+        this->setGeometry(
+            geom.left(),
+            geom.top()-this->av_slideSpeed,
+            geom.width(),
+            geom.height()
+        );
     }
     else
         this->at_slideUp->stop();
@@ -81,10 +83,12 @@ void Slider::as_slideDown()
     QRect geom = this->geometry();
     if (geom.top() < (this->av_slideVStep*this->displayH))
     {
-        this->setGeometry(geom.left(),
-                          geom.top()+this->av_slideSpeed,
-                          geom.width(),
-                          geom.height());
+        this->setGeometry(
+            geom.left(),
+            geom.top()+this->av_slideSpeed,
+            geom.width(),
+            geom.height()
+        );
     }
     else
         this->at_slideDown->stop();
@@ -95,11 +99,12 @@ void Slider::as_slideLeft()
     QRect geom = this->geometry();
     if (geom.left() > (this->av_slideHStep*this->displayW))
     {
-        this->setGeometry(geom.left()-this->av_slideSpeed,
-                          geom.top(),
-                          geom.width(),
-                          geom.height()
-                );
+        this->setGeometry(
+            geom.left()-this->av_slideSpeed,
+            geom.top(),
+            geom.width(),
+            geom.height()
+        );
     }
     else
         this->at_slideLeft->stop();
@@ -110,11 +115,12 @@ void Slider::as_slideRight()
     QRect geom = this->geometry();
     if (geom.left() < (this->av_slideHStep*this->displayW))
     {
-        this->setGeometry(geom.left()+this->av_slideSpeed,
-                          geom.top(),
-                          geom.width(),
-                          geom.height()
-                );
+        this->setGeometry(
+            geom.left()+this->av_slideSpeed,
+            geom.top(),
+            geom.width(),
+            geom.height()
+        );
     }
     else
         this->at_slideRight->stop();
@@ -151,11 +157,21 @@ void Slider::addPage(int8_t append_direction, QFrame* page)
     page->setParent(this);
     if (append_direction==APPEND_RIGHT_MOST)
     {
-        page->setGeometry(this->geometry().width(), 0, myParent->geometry().width(),myParent->geometry().height());
+        page->setGeometry(
+            this->geometry().width(),
+            0,
+            myParent->geometry().width(),
+            myParent->geometry().height()
+        );
     }
     else if (append_direction==APPEND_BOTTOM_MOST)
     {
-        page->setGeometry(0, this->geometry().height(),myParent->geometry().width(),myParent->geometry().height());
+        page->setGeometry(
+            0,
+            this->geometry().height(),
+            myParent->geometry().width(),
+            myParent->geometry().height()
+        );
     }
     page->show();
     this->autoSize();

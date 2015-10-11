@@ -6,7 +6,19 @@ RoundButton::RoundButton(QWidget *parent,
                          ) :
     HoverButton(parent)
 {
-    this->setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.45 rgba(0,0,0,155), stop:0.46 rgba(255,255,255,155) );");
+    this->setStyleSheet(
+        "background-color: "
+            "qradialgradient( "
+                "spread:pad, "
+                "cx:0.5, "
+                "cy:0.5, "
+                "radius:0.5, "
+                "fx:0.5, "
+                "fy:0.5, "
+                "stop:0.45 rgba(0,0,0,155), "
+                "stop:0.46 rgba(255,255,255,155) "
+            "); "
+    );
     this->setFlat(true);
 
     av_bgrad = 0; //-- radius of its animated zoomed-in backgroud
@@ -56,7 +68,7 @@ void RoundButton::paintEvent(QPaintEvent *e)
 
     }
 
-
+    Q_UNUSED(e);
     //QPushButton::paintEvent(e);
 }
 
