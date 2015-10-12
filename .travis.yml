@@ -1,6 +1,4 @@
-﻿sudo: false
-
-addons:
+﻿addons:
   apt:
     sources:
     - ubuntu-sdk-team
