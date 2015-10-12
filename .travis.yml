@@ -10,11 +10,6 @@ addons:
     packages:
     - ubuntu-sdk
 
-cache:
-  directories:
-  - $HOME/qtgoodies
-
-before_install: true
 before_script: true
 
-script: ls
+script: true
