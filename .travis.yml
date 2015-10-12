@@ -1,4 +1,6 @@
-﻿addons:
+﻿sudo: false
+
+addons:
   apt:
     sources:
     - ubuntu-sdk-team
@@ -8,9 +10,9 @@ addons:
     packages:
     - ubuntu-sdk
 
-before_script: qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro
+before_script: true
 
 script:
-  - make
+  - qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
 
 language: cpp
