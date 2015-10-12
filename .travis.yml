@@ -15,8 +15,6 @@ cache:
   - $HOME/qtgoodies
 
 before_install: true
-install: true
 before_script: true
 
-script:
-  - ls
+script: ls
