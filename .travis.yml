@@ -1,4 +1,7 @@
-﻿addons:
+﻿language: cpp
+sudo: false
+
+addons:
   apt:
     sources:
     - ubuntu-sdk-team
@@ -8,4 +11,16 @@ addons:
     packages:
     - ubuntu-sdk
 
-script: ls
+cache:
+  directories:
+  - $HOME/qtgoodies
+
+before_install:
+  - ls
+
+before_script:
+  - ls -R $HOME/qtgoodies
+
+script:
+  - ls
+  - sh -c "qmake CONFIG+=release demo/QtGoodiesDemo/QtGoodiesDemo.pro && make"
