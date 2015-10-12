@@ -13,4 +13,5 @@ before_script: ls
 script:
   - qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
 
+sudo: false
 language: cpp
