@@ -1,15 +1,14 @@
 ﻿language: cpp
-sudo: required
 
-before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+addons:
+  apt:
+    sources:
+      ubuntu-sdk-team
+    packages:
+      ubuntu-sdk
 
 env:
   - CONFIG=release QT=qt5
-
-install:
-  - sh -c "sudo add-apt-repository ppa:ubuntu-sdk-team/ppa; sudo apt-get update -q; sudo apt-get install -y ubuntu-sdk;"
 
 script:
   - sh -c "qmake CONFIG+=$CONFIG demo/QtGoodiesDemo/QtGoodiesDemo.pro"
