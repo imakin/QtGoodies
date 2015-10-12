@@ -1,4 +1,4 @@
-﻿language: cpp
+﻿language: c++
 sudo: false
 
 addons:
@@ -15,11 +15,9 @@ cache:
   directories:
   - $HOME/qtgoodies
 
-before_install:
-  - ls
-
-before_script:
-  - ls -R $HOME/qtgoodies
+before_install: true
+install: true
+before_script: true
 
 script:
   - ls
