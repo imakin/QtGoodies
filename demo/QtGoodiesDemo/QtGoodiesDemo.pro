@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     ../../goodies/hoverbutton/hoverbutton.cpp \
     ../../goodies/slider/slider.cpp \
     ../../goodies/hoverframe/hoverframe.cpp \
-    demo1_slider.cpp
+    demo1_slider.cpp \
+    ../../goodies/switchbutton/switchbutton.cpp
 
 HEADERS  += mainwindow.h \
     ../../goodies/roundbutton/roundbutton.h \
     ../../goodies/hoverbutton/hoverbutton.h \
     ../../goodies/slider/slider.h \
     ../../goodies/hoverframe/hoverframe.h \
-    demo1_slider.h
+    demo1_slider.h \
+    ../../goodies/switchbutton/switchbutton.h
 
 FORMS    += mainwindow.ui
 
