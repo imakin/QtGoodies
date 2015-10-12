@@ -1,5 +1,4 @@
-﻿language: c++
-sudo: false
+﻿sudo: false
 
 addons:
   apt:
@@ -21,4 +20,3 @@ before_script: true
 
 script:
   - ls
-  - sh -c "qmake CONFIG+=release demo/QtGoodiesDemo/QtGoodiesDemo.pro && make"
