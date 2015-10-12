@@ -3,13 +3,10 @@
 addons:
   apt:
     sources:
-      ubuntu-sdk-team
+      - ubuntu-sdk-team
     packages:
-      ubuntu-sdk
-
-env:
-  - CONFIG=release QT=qt5
+      - ubuntu-sdk
 
 script:
-  - sh -c "qmake CONFIG+=$CONFIG demo/QtGoodiesDemo/QtGoodiesDemo.pro"
+  - sh -c "qmake CONFIG+=release demo/QtGoodiesDemo/QtGoodiesDemo.pro"
   - make
