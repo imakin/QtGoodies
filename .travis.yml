@@ -10,6 +10,7 @@ addons:
     packages:
     - ubuntu-sdk
 
-before_script: true
+before_script: ls
 
-script: true
+script:
+  - qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
