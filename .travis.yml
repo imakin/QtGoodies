@@ -8,7 +8,4 @@ addons:
     packages:
     - ubuntu-sdk
 
-script:
-- ls
-- echo "tell me this is working"
-- sh -c "qmake CONFIG+=release demo/QtGoodiesDemo/QtGoodiesDemo.pro && make"
+script: ls
