@@ -1,6 +1,4 @@
-﻿language: cpp
-
-addons:
+﻿addons:
   apt:
     sources:
     - ubuntu-sdk-team
@@ -10,4 +8,7 @@ addons:
     packages:
     - ubuntu-sdk
 
-script: ls
+script:
+  - ls
+  - echo "tell me this is working"
+  - sh -c "qmake CONFIG+=release demo/QtGoodiesDemo/QtGoodiesDemo.pro && make"
