@@ -25,4 +25,4 @@ before_script:
 - ls
 - $CXX --version
 
-script: qmake "QMAKE_CC=$CC" "QMAKE_CXX=$CXX" demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
+script: qmake "QMAKE_CC=$CC" "QMAKE_CXX=$CXX" "QMAKE_CXXFLAGS+=-std=c++11" demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
