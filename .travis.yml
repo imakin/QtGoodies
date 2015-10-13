@@ -1,17 +1,13 @@
 ﻿addons:
   apt:
     sources:
-    - ubuntu-sdk-team
-
-addons:
-  apt:
+      - ubuntu-sdk-team
     packages:
-    - ubuntu-sdk
+      - ubuntu-sdk
 
 before_script: ls
 
 script: qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
-# seriously travis you said it support not only ruby but you always call rake this isn't working
 
 language: cpp
 sudo: false
