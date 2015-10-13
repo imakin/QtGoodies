@@ -1,12 +1,20 @@
 language: cpp
 sudo: false
+compiler:
+- gcc
+
+install:
+- export CXX="g++-4.8" CC="gcc-4.8"
 
 addons:
   apt:
     sources:
       - ubuntu-sdk-team
+      - ubuntu-toolchain-r-test
     packages:
       - ubuntu-sdk
+      - gcc-4.8
+      - g++-4.8
 
 before_script: ls
 
