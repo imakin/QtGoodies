@@ -1,4 +1,7 @@
-﻿addons:
+﻿language: cpp
+sudo: false
+
+addons:
   apt:
     sources:
       - ubuntu-sdk-team
@@ -9,5 +12,3 @@ before_script: ls
 
 script: qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
 
-language: cpp
-sudo: false
