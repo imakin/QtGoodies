@@ -16,6 +16,8 @@ addons:
       - gcc-4.8
       - g++-4.8
 
-before_script: ls
+before_script:
+- ls
+- $CXX --version
 
-script: qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
+script: qmake "QMAKE_CC=$CC" "QMAKE_CXX=$CXX" demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
