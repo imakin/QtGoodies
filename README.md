@@ -64,3 +64,6 @@ Sliding/scrolling is just a call away:
       * An animated round button mimic one on the Github GUI. This class derivates HoverButton. 
       * Usage: common usage, (like QPushButton)
       
+
+# Demo test
+![Preview](https://api.travis-ci.org/imakin/QtGoodies.svg?branch=master "build")
