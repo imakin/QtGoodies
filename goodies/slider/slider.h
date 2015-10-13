@@ -3,6 +3,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QFrame>
+#include <cinttypes>
 
 /*
  * author Izzulmakin, August 2015
