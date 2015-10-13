@@ -1,0 +1,2 @@
+#!/bin/bash
+qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro
