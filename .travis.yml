@@ -1,4 +1,4 @@
-﻿language: cpp
+language: cpp
 sudo: false
 
 addons:
@@ -11,4 +11,3 @@ addons:
 before_script: ls
 
 script: qmake demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
-
