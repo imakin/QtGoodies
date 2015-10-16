@@ -26,3 +26,6 @@ before_script:
 - $CXX --version
 
 script: qmake "QMAKE_CC=$CC" "QMAKE_CXX=$CXX" "QMAKE_CXXFLAGS+=-std=c++11" demo/QtGoodiesDemo/QtGoodiesDemo.pro && make
+
+notifications:
+  email: false
