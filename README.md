@@ -22,8 +22,6 @@ In-work Projects:
   
   An html-like slider frame
   
-  ![Preview](https://raw.githubusercontent.com/imakin/QtGoodies/master/doc/img/slider.gif "Slider")
-  
   Usage: 
 ```C++
         /** SLIDER DEMO **/
